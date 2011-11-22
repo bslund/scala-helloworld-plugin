@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template-definition version="1.0" xmlns="http://www.polopoly.com/polopoly/cm/app/xml">
+
+  <input-template name="com.polopoly.plugins.scala-helloworld" label="Scala Hello World Element">
+
+    <type>LayoutElement</type>
+
+    <policy>com.polopoly.plugins.scalahelloworld.HelloWorldPolicy</policy>
+    <editor>com.polopoly.cm.app.widget.OTopPolicyWidget</editor>
+    <viewer>com.polopoly.cm.app.widget.OTopPolicyWidget</viewer>
+    
+    <param name="ViewState_insert">false</param>
+    <param name="EditState_saveAndClose">true</param>
+    <param name="EditState_saveAndInsert">false</param>
+    <param name="EditState_saveAndFastInsert">false</param>
+    <param name="EditState_saveAndView">true</param>
+    <param name="EditNewState_saveAndClose">false</param>
+    <param name="EditNewState_saveAndInsert">false</param>
+    <param name="EditNewState_saveAndFastInsert">true</param>
+    <param name="EditNewState_saveAndView">false</param>
+    <param name="renderTemplateIconInSelect">true</param>
+    
+    <editor contextName="orchid_TOCENTRY">example.widget.OContentListEntryBasePolicyWidget</editor>
+    <viewer contextName="orchid_TOCENTRY">example.widget.OContentListEntryBasePolicyWidget</viewer>
+
+    <field name="name" input-template="p.ContentName" label="Name" required="true">
+      <param name="inlineHelp">true</param>
+    </field>    
+    <field name="salutation" input-template="p.TextInput" label="Salutation" required="true">
+      <param name="default">World</param>
+    </field>
+
+    <output-templates mode="www">
+      <id>com.polopoly.plugins.scala-helloworld.ot</id>
+    </output-templates>
+  </input-template>
+
+</template-definition>
